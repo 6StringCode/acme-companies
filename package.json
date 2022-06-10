@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "build:dev": "webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon server"
+    "start:dev": "npm run build:dev & nodemon server --ignore src/ --ignore dist/"
   },
   "keywords": [],
   "author": "",
